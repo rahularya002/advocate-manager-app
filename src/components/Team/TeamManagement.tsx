@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Plus, Search, Filter, User, Mail, Phone, Shield, Edit, Trash2, UserCheck, UserX, Loader } from 'lucide-react';
 import { format } from 'date-fns';
 import { AddTeamMemberModal } from './AddTeamMemberModal';
@@ -45,7 +45,7 @@ export function TeamManagement() {
     return matchesSearch && matchesRole && matchesStatus;
   });
 
-  const handleAddTeamMember = async (newMemberData: any) => {
+  const handleAddTeamMember = async () => {
     // The AddTeamMemberModal will handle the API call and refresh
     await loadTeamMembers();
   };

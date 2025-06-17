@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar as CalendarIcon, Plus, ChevronLeft, ChevronRight, Clock, MapPin, Users, AlertTriangle, Loader } from 'lucide-react';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths, isToday } from 'date-fns';
 import { AddEventModal } from './AddEventModal';
@@ -38,7 +38,7 @@ export function Calendar() {
   const monthEnd = endOfMonth(currentDate);
   const calendarDays = eachDayOfInterval({ start: monthStart, end: monthEnd });
 
-  const handleAddEvent = async (newEventData: any) => {
+  const handleAddEvent = async () => {
     // The AddEventModal will handle the API call and refresh
     await loadEvents();
   };

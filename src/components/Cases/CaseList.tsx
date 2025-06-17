@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Search, Filter, Plus, Calendar, Clock, AlertTriangle, Loader, User } from 'lucide-react';
 import { format } from 'date-fns';
 import { AddCaseModal } from './AddCaseModal';
@@ -58,7 +58,7 @@ export function CaseList() {
     return matchesSearch && matchesStatus && matchesPriority;
   });
 
-  const handleAddCase = async (newCaseData: any) => {
+  const handleAddCase = async () => {
     // The AddCaseModal will handle the API call and refresh
     await loadData();
   };

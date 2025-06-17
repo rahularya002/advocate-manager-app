@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Scale, Users, FileText, Calendar, TrendingUp, AlertTriangle, Loader } from 'lucide-react';
+import { Scale, Users, FileText, Calendar,  AlertTriangle, Loader } from 'lucide-react';
 import { StatsCard } from './StatsCard';
 import { useAuth } from '../../context/AuthContext';
 import { getCases, getTeamMembers, getCalendarEvents } from '../../lib/api';
